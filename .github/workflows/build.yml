@@ -22,6 +22,8 @@ jobs:
           arguments: -b ci.gradle package
   sonar:
     name: Sonar Analysis
+    runs-on: ubuntu-latest
+    permissions: read-all
     steps:
       - uses: actions/checkout@v2
         with:
