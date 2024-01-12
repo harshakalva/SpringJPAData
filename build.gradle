@@ -35,10 +35,3 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
-
-sonar {
-    properties {
-        property "sonar.projectKey", "spring-jpa-data"
-        property "sonar.projectName", "SpringJPAData"
-    }
-}
