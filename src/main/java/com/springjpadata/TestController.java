@@ -6,6 +6,7 @@ public class TestController {
     private Integer myInteger;
     private String myString;
     public boolean validate() {
+        String unusedVariable = "unused varaible";
         System.out.println(ONE);
         if(myString.equals(ONE_STRING)) {
             System.out.println("String are equal");
