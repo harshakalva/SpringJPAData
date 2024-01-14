@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 withGradle {
-                    ./gradlew build
+                    ./gradlew test
                 }
             }
         }
