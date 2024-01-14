@@ -9,6 +9,7 @@ public class TestController {
         System.out.println(ONE);
         if(myString.equals(ONE_STRING)) {
             System.out.println("String are equal");
+            System.out.println("Pull Request test 4 ");
         }
         if(myInteger.equals(ONE)) {
             System.out.println("Equals");
