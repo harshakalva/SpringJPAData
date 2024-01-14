@@ -2,27 +2,16 @@ pipeline {
     agent any
 
     stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World .... '
+                checkout scmGit(branches: [[name: '**']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-ssh', url: 'git@github.com:harshakalva/SpringJPAData.git']])
+                echo 'Hello World Complete'
+            }
+        }
         stage('Build') {
-            steps {
-                echo 'Building..'
-                withGradle {
-                    ./gradlew build
-                }
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                withGradle {
-                    ./gradlew test
-                }
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+            withGradle {
+                gradle clean build
             }
         }
     }
