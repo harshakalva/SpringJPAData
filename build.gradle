@@ -18,11 +18,7 @@ repositories {
 
 sonarqube {
     properties {
-//        property 'sonar.host.url', 'https://sonarqube.host.com'
-//        property "sonar.login", ""
-//        property "sonar.password", ""
-//        property "sonar.projectKey", "project:service"
-//        property 'sonar.projectName', 'NameOf Service'
+        property 'sonar.gradle.skipCompile', 'true'
         property 'sonar.java.source', 17
         property 'sonar.junit.reportPaths', 'build/results'
         property 'encoding', 'UTF-8'
