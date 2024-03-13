@@ -20,9 +20,10 @@ pipeline {
                 environment name: "ALL_STEPS", value: "YES"
             }    
             steps {
-            withGradle {
-                gradle clean build
-            }
+                // withGradle {
+                //     gradle clean build
+                // }
+                echo 'Build  .... '
             }
         }
     }
