@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        scannerHome = tool 'SonarQubeScanner'
+        ALL_STEPS = "SONAR" 
+    }
+
     stages {
         stage('Hello') {
             steps {
@@ -10,6 +15,9 @@ pipeline {
             }
         }
         stage('Build') {
+            when { 
+                environment name: "ALL_STEPS", value: "YES"
+            }    
             withGradle {
                 gradle clean build
             }
