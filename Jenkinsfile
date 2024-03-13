@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        scannerHome = tool 'SonarQubeScanner'
         ALL_STEPS = "SONAR" 
     }
 
